@@ -1,71 +1,143 @@
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#f0f0f0"
-    android:padding="16dp">
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="#F9FAFB">
 
+    <!-- عنوان أعلى الصفحة -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add New Subject"
+        android:textSize="24sp"
+        android:textColor="#007AFF"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="24dp" />
+
+    <!-- اسم المادة مع أيقونة -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center_horizontal">
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center_vertical"
+        android:elevation="2dp"
+        android:clipToPadding="false"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="#FFFFFF"
+        android:backgroundTintMode="src_in"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rounded_edittext">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Add New Subject"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:fontFamily="serif"
-            android:textColor="#bf8e68"
-            android:layout_marginBottom="24dp" />
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@android:drawable/ic_menu_edit"
+            android:layout_marginEnd="12dp"
+            app:tint="#007AFF" />
 
         <EditText
             android:id="@+id/etSubjectName"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:hint="Subject Name"
-            android:inputType="text"
-            android:padding="12dp"
-            android:backgroundTint="#6cb1c9"
-            android:layout_marginBottom="16dp" />
+            android:layout_weight="1"
+            android:hint="Enter subject name"
+            android:background="@null"
+            android:textColor="#333333"
+            android:textSize="16sp"
+            android:inputType="textPersonName" />
+    </LinearLayout>
+
+    <!-- وصف المادة مع أيقونة -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center_vertical"
+        android:elevation="2dp"
+        android:clipToPadding="false"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="#FFFFFF"
+        android:backgroundTintMode="src_in"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rounded_edittext">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@android:drawable/ic_menu_info_details"
+            android:layout_marginEnd="12dp"
+            app:tint="#007AFF" />
 
         <EditText
             android:id="@+id/etDescription"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:hint="Description"
+            android:layout_weight="1"
+            android:hint="Enter subject description"
+            android:background="@null"
+            android:textColor="#333333"
+            android:textSize="16sp"
             android:inputType="textMultiLine"
-            android:minLines="3"
-            android:padding="12dp"
-            android:backgroundTint="#6cb1c9"
-            android:layout_marginBottom="16dp" />
+            android:minLines="2"
+            android:maxLines="4" />
+    </LinearLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Select Teacher"
-            android:textSize="18sp"
-            android:textColor="#bf8e68"
-            android:layout_marginBottom="8dp"
-            android:fontFamily="serif" />
+    <!-- سبنر اختيار المعلم -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:layout_marginBottom="24dp"
+        android:gravity="center_vertical"
+        android:elevation="2dp"
+        android:clipToPadding="false"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="#FFFFFF"
+        android:backgroundTintMode="src_in"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rounded_edittext">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@android:drawable/ic_menu_myplaces"
+            android:layout_marginEnd="12dp"
+            app:tint="#007AFF" />
 
         <Spinner
             android:id="@+id/spinnerTeachers"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="24dp" />
-
-        <Button
-            android:id="@+id/btnSubmitSubject"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:text="Submit"
-            android:backgroundTint="#6cb1c9"
-            android:textColor="#FFFFFF"
-            android:fontFamily="serif"
-            android:textSize="18sp"
-            android:padding="14dp" />
-
+            android:layout_weight="1"
+            android:spinnerMode="dropdown"
+            android:background="@null" />
     </LinearLayout>
-</ScrollView>
+
+    <!-- زر الإضافة -->
+    <Button
+        android:id="@+id/btnAddSubject"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="Add Subject"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#007AFF"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:elevation="4dp"
+        />
+
+</LinearLayout>

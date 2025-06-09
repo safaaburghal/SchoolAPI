@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f0f0f0"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#ffffff"
+        android:padding="16dp"
+        android:layout_margin="8dp"
+        android:elevation="4dp"
+        android:clipToPadding="false">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Class Schedule"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#bf8e68"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp" />
+
+        <Spinner
+            android:id="@+id/spinnerDay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffdeaa"
+            android:layout_marginBottom="12dp" />
+
+        <EditText
+            android:id="@+id/editStartTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Start Time (HH:MM)"
+            android:focusable="false"
+            android:backgroundTint="#6cb1c9"
+            android:layout_marginBottom="12dp"
+            android:drawableLeft="@android:drawable/ic_menu_recent_history" />
+
+        <EditText
+            android:id="@+id/editEndTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="End Time (HH:MM)"
+            android:focusable="false"
+            android:backgroundTint="#6cb1c9"
+            android:layout_marginBottom="12dp"
+            android:drawableLeft="@android:drawable/ic_menu_recent_history" />
+
+        <Spinner
+            android:id="@+id/spinnerSubject"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffdeaa"
+            android:layout_marginBottom="12dp" />
+
+        <Spinner
+            android:id="@+id/spinnerClass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffdeaa"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/btnSubmitSchedule"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Schedule"
+            android:textColor="#ffffff"
+            android:backgroundTint="#6cb1c9"
+            android:layout_marginBottom="12dp" />
+
+        <Button
+            android:id="@+id/btnShowClassSchedule"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Show Class Schedule"
+            android:textColor="#ffffff"
+            android:backgroundTint="#bf8e68" />
+
+        <!-- مستقبلاً: مكان جدول العرض -->
+        <TableLayout
+            android:id="@+id/tableSchedule"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*"
+            android:background="#ffffff"
+            android:layout_marginTop="16dp"
+            android:padding="8dp" />
+
+    </LinearLayout>
+</ScrollView>

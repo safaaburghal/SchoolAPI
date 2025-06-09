@@ -35,6 +35,10 @@ public class RegisterDashboardActivity extends AppCompatActivity {
             Intent intent = new Intent(RegisterDashboardActivity.this, AddSubjectActivity.class);
             startActivity(intent);
         });
+        btnBuildStudentSchedule.setOnClickListener(v -> {
+            Intent intent = new Intent(RegisterDashboardActivity.this, AddScheduleActivity.class);
+            startActivity(intent);
+        });
 
 
 

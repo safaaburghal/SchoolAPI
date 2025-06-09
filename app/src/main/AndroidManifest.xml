@@ -19,10 +19,12 @@
 
         <activity android:name=".AddStudentActivity" />
         <activity android:name=".AddSubjectActivity" />
+        <activity android:name=".AddScheduleActivity" />
+
 
 
         <activity
-            android:name=".SendAssignmentActivity"
+            android:name=".RegisterDashboardActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
