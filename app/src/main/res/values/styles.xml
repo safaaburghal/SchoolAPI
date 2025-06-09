@@ -1,0 +1,16 @@
+<resources>
+
+    <!-- ثيم مخصص للـ DatePicker -->
+    <style name="BlueDatePickerTheme" parent="Theme.MaterialComponents.Light.Dialog">
+        <item name="android:datePickerStyle">@style/BlueDatePickerWidget</item>
+    </style>
+
+    <style name="BlueDatePickerWidget" parent="android:Widget.Material.DatePicker">
+        <item name="android:headerBackground">#6cb1c9</item> <!-- الأزرق الفاتح -->
+        <item name="android:calendarTextColor">#6cb1c9</item> <!-- نفس الأزرق -->
+        <item name="android:colorAccent">#ffdeaa</item> <!-- دائرة اليوم المحدد -->
+
+    </style>
+
+
+</resources>
